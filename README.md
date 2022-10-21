@@ -4,3 +4,6 @@
 
 <b>Игра "Brain-Even"</b>
 <a href="https://asciinema.org/a/yvy09IRE11rQwR6iZgUVEMJjD" target="_blank"><img src="https://asciinema.org/a/yvy09IRE11rQwR6iZgUVEMJjD.svg" /></a>
+
+<b>Игра "Brain-Calc"</b>
+<a href="https://asciinema.org/a/qrzHR2bVtleRpQELOu6hqw8c9" target="_blank"><img src="https://asciinema.org/a/qrzHR2bVtleRpQELOu6hqw8c9.svg" /></a>
