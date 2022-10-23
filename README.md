@@ -7,3 +7,6 @@
 
 <b>Игра "Brain-Calc"</b>
 <a href="https://asciinema.org/a/qrzHR2bVtleRpQELOu6hqw8c9" target="_blank"><img src="https://asciinema.org/a/qrzHR2bVtleRpQELOu6hqw8c9.svg" /></a>
+
+<b>Игра "Brain-Gcd"</b>
+<a href="https://asciinema.org/a/K9vmwkKznK4merW3Hk3lTW8Lq" target="_blank"><img src="https://asciinema.org/a/K9vmwkKznK4merW3Hk3lTW8Lq.svg" /></a>
