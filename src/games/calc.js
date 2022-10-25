@@ -10,6 +10,7 @@ const getInstruction = (number1, number2, instruction) => {
   } if (instruction === '*') {
     return number1 * number2;
   }
+  return null;
 };
 
 const getTask = () => {
