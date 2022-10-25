@@ -9,17 +9,12 @@ export const getGameEngine = (specification, getTask) => {
   console.log('Welcome to the Brain Games!');
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!`);
-
   console.log(specification);
-
   const roundCount = 3;
-
   for (let i = 0; i < roundCount; i += 1) {
     const [gameQuestion, correctAnswer] = getTask();
     console.log(`Question: ${gameQuestion}`);
-
     const yourAnswer = readlineSync.question('Your answer: ');
-
     if (yourAnswer === correctAnswer) {
       console.log('Correct!');
     } else {
