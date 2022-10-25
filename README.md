@@ -13,3 +13,6 @@
 
 <strong>Игра "Brain-Progression"</strong>
 <a href="https://asciinema.org/a/vFsANqfSUnrNum9owiD7ZalPw" target="_blank"><img src="https://asciinema.org/a/vFsANqfSUnrNum9owiD7ZalPw.svg" /></a>
+
+<strong>Игра "Brain-Prime"</strong>
+<a href="https://asciinema.org/a/nfAzY42II5jeMWVDk3MSKHe7F" target="_blank"><img src="https://asciinema.org/a/nfAzY42II5jeMWVDk3MSKHe7F.svg" /></a>
