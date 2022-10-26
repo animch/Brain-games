@@ -18,7 +18,7 @@ const getTask = () => {
   const number2 = getRandomNumber(1, 50);
   const operators = ['+', '-', '*'];
   const instruction = getRandomArrayElement(operators);
-  const gameQuestion = String(`${number1}${instruction}${number2}`);
+  const gameQuestion = `${number1}${instruction}${number2}`;
   const correctAnswer = String(getInstruction(number1, number2, instruction));
   return [gameQuestion, correctAnswer];
 };
