@@ -4,12 +4,14 @@ const specification = 'Find the greatest common divisor of given numbers.';
 
 const isGcd = (number1, number2) => {
   let r = number1 % number2;
+  let x = number1;
+  let y = number2;
   while (r !== 0) {
-    number1 = number2;
-    number2 = r;
-    r = number1 % number2;
+    x = y;
+    y = r;
+    r = x % y;
   }
-  return number2;
+  return y;
 };
 
 const getTask = () => {
