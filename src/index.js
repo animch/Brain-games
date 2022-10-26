@@ -17,7 +17,7 @@ export const getGameEngine = (specification, getTask) => {
     const [gameQuestion, correctAnswer] = getTask();
     console.log(`Question: ${gameQuestion}`);
     const yourAnswer = readlineSync.question('Your answer: ');
-    if (yourAnswer === correctAnswer) {
+    if (yourAnswer.toLowerCase() === correctAnswer) {
       console.log('Correct!');
     } else {
       console.log(`'${yourAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
