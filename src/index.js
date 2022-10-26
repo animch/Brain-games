@@ -25,5 +25,5 @@ export const getGameEngine = (specification, getTask) => {
       return;
     }
   }
-  console.log(`Congratulations, ${userName}`);
+  console.log(`Congratulations, ${userName}!`);
 };
