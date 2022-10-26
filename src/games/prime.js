@@ -7,7 +7,7 @@ const isPrime = (number) => (number <= 2) || (number % 2 !== 0);
 const getTask = () => {
   const number = getRandomNumber(1, 100);
   const gameQuestion = String(`${number}`);
-  const correctAnswer = isPrime(number) ? 'yes' : 'no';
+  const correctAnswer = String(isPrime(number) ? 'yes' : 'no');
   return [gameQuestion, correctAnswer];
 };
 
