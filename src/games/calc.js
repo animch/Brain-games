@@ -1,30 +1,38 @@
-import { getGameEngine, getRandomArrayElement, getRandomNumber } from '../index.js';
+import launchGame from '../index.js';
+import getRandomNumber from '../utils.js';
 
-const specification = 'What is the result of the expression?';
+const gameRule = 'What is the result of the expression?';
+
+const minNumber = 1;
+const maxNumber = 50;
+const minIndex = 0;
+const maxIndex = 2;
 
 const getInstruction = (number1, number2, instruction) => {
-  if (instruction === '+') {
-    return number1 + number2;
-  } if (instruction === '-') {
-    return number1 - number2;
-  } if (instruction === '*') {
-    return number1 * number2;
+  switch (instruction) {
+    case '+':
+      return number1 + number2;
+    case '-':
+      return number1 - number2;
+    case '*':
+      return number1 * number2;
+    default:
+      throw new Error(`Unknown instruction: '${instruction}'!`);
   }
-  return null;
 };
 
-const getTask = () => {
-  const number1 = getRandomNumber(1, 50);
-  const number2 = getRandomNumber(1, 50);
+const getGameTask = () => {
+  const number1 = getRandomNumber(minNumber, maxNumber);
+  const number2 = getRandomNumber(minNumber, maxNumber);
   const operators = ['+', '-', '*'];
-  const instruction = getRandomArrayElement(operators);
+  const instruction = operators[getRandomNumber(minIndex, maxIndex)];
   const gameQuestion = String(`${number1} ${instruction} ${number2}`);
   const correctAnswer = String(getInstruction(number1, number2, instruction));
   return [gameQuestion, correctAnswer];
 };
 
 const getBrainCalc = () => {
-  getGameEngine(specification, getTask);
+  launchGame(gameRule, getGameTask);
 };
 
 export default getBrainCalc;
