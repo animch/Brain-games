@@ -1,18 +1,22 @@
-import { getGameEngine, getRandomNumber } from '../index.js';
+import launchGame from '../index.js';
+import getRandomNumber from '../utils.js';
 
-const specification = 'Answer "yes" if the number is even, otherwise answer "no".';
+const gameRule = 'Answer "yes" if the number is even, otherwise answer "no".';
+
+const minNumber = 1;
+const maxNumber = 50;
 
 const isEven = (number) => number % 2 === 0;
 
-const getTask = () => {
-  const number = getRandomNumber(1, 50);
+const getGameTask = () => {
+  const number = getRandomNumber(minNumber, maxNumber);
   const gameQuestion = String(`${number}`);
   const correctAnswer = isEven(number) ? 'yes' : 'no';
   return [gameQuestion, correctAnswer];
 };
 
 const getBrainEven = () => {
-  getGameEngine(specification, getTask);
+  launchGame(gameRule, getGameTask);
 };
 
 export default getBrainEven;

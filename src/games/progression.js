@@ -1,18 +1,27 @@
-import { getGameEngine, getRandomNumber } from '../index.js';
+import launchGame from '../index.js';
+import getRandomNumber from '../utils.js';
 
-const specification = 'What number is missing in the progression?';
+const gameRule = 'What number is missing in the progression?';
+
+const progressionLength = 10;
+const minIndex = 0;
+const maxIndex = 9;
+const minNumber = 1;
+const maxNumber = 100;
+const minStepNumber = 2;
+const maxStepNumber = 10;
+const numIndex = getRandomNumber(minIndex, maxIndex);
 
 const getProgression = () => {
-  const step = getRandomNumber(2, 10);
-  const arrNumbers = [getRandomNumber(1, 100)];
-  for (let i = 0; arrNumbers.length < 10; i += 1) {
-    arrNumbers.push(arrNumbers[i] + step);
+  const step = getRandomNumber(minStepNumber, maxStepNumber);
+  const numbers = [getRandomNumber(minNumber, maxNumber)];
+  for (let i = 0; numbers.length < progressionLength; i += 1) {
+    numbers.push(numbers[i] + step);
   }
-  return arrNumbers;
+  return numbers;
 };
 
-const getTask = () => {
-  const numIndex = getRandomNumber(0, 9);
+const getGameTask = () => {
   const progression = getProgression();
   const correctAnswer = String(progression[numIndex]);
   progression[numIndex] = '..';
@@ -21,7 +30,7 @@ const getTask = () => {
 };
 
 const getBrainProgression = () => {
-  getGameEngine(specification, getTask);
+  launchGame(gameRule, getGameTask);
 };
 
 export default getBrainProgression;
