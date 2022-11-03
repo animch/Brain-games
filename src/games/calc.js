@@ -8,7 +8,7 @@ const maxNumber = 50;
 const minIndex = 0;
 const maxIndex = 2;
 
-const getInstruction = (number1, number2, instruction) => {
+const calculateExpression = (number1, number2, instruction) => {
   switch (instruction) {
     case '+':
       return number1 + number2;
@@ -21,18 +21,18 @@ const getInstruction = (number1, number2, instruction) => {
   }
 };
 
-const getGameTask = () => {
+const generateRound = () => {
   const number1 = getRandomNumber(minNumber, maxNumber);
   const number2 = getRandomNumber(minNumber, maxNumber);
   const operators = ['+', '-', '*'];
   const instruction = operators[getRandomNumber(minIndex, maxIndex)];
-  const gameQuestion = String(`${number1} ${instruction} ${number2}`);
-  const correctAnswer = String(getInstruction(number1, number2, instruction));
+  const gameQuestion = `${number1} ${instruction} ${number2}`;
+  const correctAnswer = String(calculateExpression(number1, number2, instruction));
   return [gameQuestion, correctAnswer];
 };
 
-const getBrainCalc = () => {
-  launchGame(gameRule, getGameTask);
+const startBrainCalc = () => {
+  launchGame(gameRule, generateRound);
 };
 
-export default getBrainCalc;
+export default startBrainCalc;

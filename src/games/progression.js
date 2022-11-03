@@ -21,7 +21,7 @@ const getProgression = () => {
   return numbers;
 };
 
-const getGameTask = () => {
+const generateRound = () => {
   const progression = getProgression();
   const correctAnswer = String(progression[numIndex]);
   progression[numIndex] = '..';
@@ -29,8 +29,8 @@ const getGameTask = () => {
   return [gameQuestion, correctAnswer];
 };
 
-const getBrainProgression = () => {
-  launchGame(gameRule, getGameTask);
+const startBrainProgression = () => {
+  launchGame(gameRule, generateRound);
 };
 
-export default getBrainProgression;
+export default startBrainProgression;

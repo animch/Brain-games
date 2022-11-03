@@ -15,15 +15,15 @@ const isPrime = (number) => {
   return true;
 };
 
-const getGameTask = () => {
+const generateRound = () => {
   const number = getRandomNumber(minNumber, maxNumber);
-  const gameQuestion = String(`${number}`);
+  const gameQuestion = `${number}`;
   const correctAnswer = isPrime(number) ? 'yes' : 'no';
   return [gameQuestion, correctAnswer];
 };
 
-const getBrainPrime = () => {
-  launchGame(gameRule, getGameTask);
+const startBrainPrime = () => {
+  launchGame(gameRule, generateRound);
 };
 
-export default getBrainPrime;
+export default startBrainPrime;

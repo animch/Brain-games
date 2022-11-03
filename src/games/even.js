@@ -8,15 +8,15 @@ const maxNumber = 50;
 
 const isEven = (number) => number % 2 === 0;
 
-const getGameTask = () => {
+const generateRound = () => {
   const number = getRandomNumber(minNumber, maxNumber);
-  const gameQuestion = String(`${number}`);
+  const gameQuestion = `${number}`;
   const correctAnswer = isEven(number) ? 'yes' : 'no';
   return [gameQuestion, correctAnswer];
 };
 
-const getBrainEven = () => {
-  launchGame(gameRule, getGameTask);
+const startBrainEven = () => {
+  launchGame(gameRule, generateRound);
 };
 
-export default getBrainEven;
+export default startBrainEven;

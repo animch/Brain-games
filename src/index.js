@@ -2,14 +2,14 @@
 import readlineSync from 'readline-sync';
 import getUserName from './cli.js';
 
-export default (gameRule, getGameTask) => {
+export default (gameRule, generateRound) => {
   const userName = getUserName();
   console.log(gameRule);
 
   const roundCount = 3;
 
   for (let i = 0; i < roundCount; i += 1) {
-    const [gameQuestion, correctAnswer] = getGameTask();
+    const [gameQuestion, correctAnswer] = generateRound();
     console.log(`Question: ${gameQuestion}`);
     const userAnswer = readlineSync.question('Your answer: ');
     if (userAnswer === correctAnswer) {
