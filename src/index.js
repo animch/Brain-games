@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
-import getUserName from './cli.js';
+import greetUser from './cli.js';
 
 export default (gameRule, generateRound) => {
-  const userName = getUserName();
+  const userName = greetUser();
   console.log(gameRule);
 
   const roundCount = 3;
